@@ -89,6 +89,53 @@
         font-weight: 700;
         color:#888;
     }
+        
+    .block {
+        width: 1100px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .block .ulRec {
+        margin-top: 20px;
+    }
+
+    .block .ulRec .liRec {
+        float: left;
+        width: 263px;
+        height: 382px;
+        margin-right: 16px;
+    }
+
+    .block .ulRec .liRec .goodName {
+        margin-top: 10px;
+    }
+
+    .block .ulRec .liRec .goodName a {
+        cursor: pointer;
+        font-size: 14px;
+        text-align: center
+    }
+
+    .block .ulRec .liRec .goodName a:hover {
+        text-decoration: underline;
+    }
+
+    .block .ulRec .liRec .goodName .price {
+        font-size: 16px;
+        color: #d33a31;
+        padding-top: 4px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 1px
+    }
+
+    /* 清除浮动 */
+    .block .ulRec .clear {
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+
 </style>
 
 <body>
@@ -139,29 +186,367 @@
             <span>&nbsp;>&nbsp;商品列表</span>
         </div>
         <div class="selector">
-                <div class=selector-top>
-                    <span>分类：</span>
-                    <ul>
-                        <li><a href="javascript:;">耳机</a></li>
-                        <li><a href="javascript:;">键盘</a></li>
-                        <li><a href="javascript:;">雨伞</a></li>
-                        <li><a href="javascript:;">充电宝</a></li>
-                        <li><a href="javascript:;">尤克里里</a></li>
-                    </ul>
-                </div>
-                <div class=selector-bottom>
-                    <span>价格：</span>
-                    <ul>
-                        <li><a href="javascript:;">0-128</a></li>
-                        <li><a href="javascript:;">129-199</a></li>
-                        <li><a href="javascript:;">200-458</a></li>
-                    </ul>
-                </div>
+            <div class=selector-top>
+                <span>分类：</span>
+                <ul>
+                    <li><a href="javascript:;">耳机</a></li>
+                    <li><a href="javascript:;">键盘</a></li>
+                    <li><a href="javascript:;">雨伞</a></li>
+                    <li><a href="javascript:;">充电宝</a></li>
+                    <li><a href="javascript:;">尤克里里</a></li>
+                </ul>
+            </div>
+            <div class=selector-bottom>
+                <span>价格：</span>
+                <ul>
+                    <li><a href="javascript:;">0-128</a></li>
+                    <li><a href="javascript:;">129-199</a></li>
+                    <li><a href="javascript:;">200-458</a></li>
+                </ul>
+            </div>
         </div>
         <div class="selector-nav">
-            <a href="javascript:;" class="active">综合</a><span>·</span><a href="javascript:;">价格低到高</a><span>·</span><a href="javascript:;">价格高到低</a>
+            <a href="javascript:;" class="active">综合</a><span>·</span><a href="javascript:;">价格低到高</a><span>·</span><a
+                href="javascript:;">价格高到低</a>
         </div>
-        
+
+    </div>
+    <!-- list -->
+    <div class="list">
+        <div class="block">
+            <ul class="ulRec">
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <li class="liRec">
+                    <a href="detail.html" target="_blank" class="detailImg"><img src="images/detail.jpg" alt=""></a>
+                    <div class="goodName">
+                        <span class="hot">热门</span>
+                        <a href="detail.html" target="_blank">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</a>
+                        <p class="price">￥128</p>
+                    </div>
+                </li>
+                <div class="clear"></div>
+                <!--清除浮动-->
+            </ul>
+        </div>
     </div>
     <!-- footer -->
     <footer>
@@ -276,5 +661,26 @@
             document.getElementsByClassName("loginBox")[0].style.display = "none"
         }
     }
+    var liRec = document.getElementsByClassName("liRec")
+    for (let i = 0; i < liRec.length; i++) {
+        if ((i + 1) % 4 == 0) {
+            liRec[i].style.marginRight = "0";
+        }
+    }
+
+    document.onscroll = function () {
+        var sTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+        if (sTop > 100) {
+            document.getElementsByClassName("toTop")[0].style.display = "block"
+        } else {
+            document.getElementsByClassName("toTop")[0].style.display = "none"
+        }
+    }
+    $(".toTop").click(function () {
+        $("body,html").animate({
+            "scrollTop": 0
+        }, 500)
+    })
 </script>
+
 </html>
