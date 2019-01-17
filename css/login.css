@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+a,
+u {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #999;
+    position: absolute;
+    top: 0;
+}
+
+header .top {
+    width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+header .top .logo {
+    float: left;
+    width: 290px;
+    height: 70px;
+}
+
+header .top .topRight {
+    float: right;
+}
+
+header .top .searchbox {
+    float: left;
+    margin-top: 15px;
+    width: 300px;
+    height: 34px;
+    background: url(../images/searchbox.png)
+}
+
+#search {
+    height: 30px;
+    line-height: 34px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 2px;
+    width: 240px;
+    padding-left: 10px;
+}
+
+header .top .shopcart {
+    float: left;
+    margin-left: 41px;
+    margin-top: 12px;
+    position: relative;
+}
+
+header .top .shopcart .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 36px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header .top .shopcart span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+header .top .userInfo {
+    float: left;
+    width: 62px;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 37px;
+    margin-top: 15px;
+    position: relative;
+}
+
+header .top .userInfo .loginBox {
+    width: 160px;
+    height: 210px;
+    background: url(../images/loginBox.png);
+    position: absolute;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    top: 35px;
+    left: -55px;
+    display: none;
+    z-index: 99999;
+}
+
+header .top .userInfo .loginBox ul {
+    margin-top: 10px;
+}
+
+header .top .userInfo .loginBox ul li {
+    padding-left: 16px;
+    width: 145px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+header .top .userInfo .loginBox ul li:hover {
+    background: rgba(173, 173, 173, .3);
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    background: #f2f2f2;
+    position: absolute;
+    bottom: 0
+}
+
+footer .footer {
+    width: 1100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+footer .footer .footerLeft {
+    padding-top: 35px;
+}
+
+footer .footer .footerLeft a {
+    color: #999;
+    font-size: 12px;
+}
+
+footer .footer .footerLeft span {
+    margin: 0 8px 0 10px;
+    color: #c2c2c2;
+    font-size: 12px;
+}
+
+footer .footer .footerLeft p {
+    padding-top: 5px;
+    color: #666;
+    font-size: 12px;
+}
+
+footer .footer .footerLeft p .licence {
+    color: #666;
+    font-size: 12px;
+}
+
+footer .footer .footerLeft p .licence:hover {
+    text-decoration: underline
+}
+
+footer .footer .footerRight {
+    float: right;
+    position: relative;
+    top: -50px;
+}
+
+footer .footer .footerRight li {
+    float: left;
+    text-align: center;
+    margin: 0 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+footer .footer .footerRight li p {
+    font-size: 40px;
+    color: #999;
+}
+
+.mid {
+    width: 100%;
+    height: auto;
+    top: 70px;
+    bottom: 120px;
+    position: absolute;
+    background: #ddd
+}
+
+.mid .main {
+    width: 1100px;
+    height: 100%;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    margin: 0 auto;
+    background: #eee
+}
+
+.mid .main .box {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.mid .main .box .loginBox {
+    margin-top: 30px;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #999;
+    background: white
+}
+
+.mid .main .box .loginBox .left {
+    width: 300px;
+    text-align: center;
+    border-right: 1px dotted #ccc;
+}
+
+.mid .main .box .loginBox .left button {
+    width: 225px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #999;
+    background: #3483CF
+}
+
+.mid .main .box .loginBox .left img {
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.mid .main .box .loginBox .right {
+    position: relative;
+    top: -210px;
+    right: -315px;
+}
+
+.login {
+    width: 530px;
+    height: 340px;
+    border: 1px solid #777;
+    background: white;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    display: none;
+}
+
+.login .topbar {
+    height: 40px;
+    background: #222;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.login .topbar .close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login .main {
+    width: 220px;
+    height: 180px;
+    margin: 50px auto;
+    margin-bottom: 0
+}
+
+.login .main h4 {
+    margin-top: 10px;
+}
+
+.login .main input {
+    padding: 0 10px;
+    margin-top: 10px;
+    height: 20px;
+    width: 200px;
+}
+
+.login .main .loginbtn {
+    width: 225px;
+    margin-top: 20px;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #999;
+    background: #3483CF
+}
+
+.login .bottom {
+    margin-top: 30px;
+    height: 40px;
+    border-top: 1px solid #999;
+    line-height: 40px;
+    padding-right: 10px;
+    background: #eee;
+    text-align: right;
+}
+
+.login .bottom span {
+    cursor: pointer;
+}
+
+.register {
+    width: 530px;
+    height: 340px;
+    border: 1px solid #777;
+    background: white;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    display: none;
+}
+
+.register .topbar {
+    height: 40px;
+    background: #222;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.register .topbar .close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.register .main {
+    width: 220px;
+    height: 180px;
+    margin: 50px auto;
+    margin-bottom: 0
+}
+
+.register .main h4 {
+    margin-top: 10px;
+}
+
+.register .main input {
+    padding: 0 10px;
+    margin-top: 10px;
+    height: 20px;
+    width: 200px;
+}
+
+.register .main .submit {
+    width: 225px;
+    margin-top: 20px;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #999;
+    background: #3483CF
+}
+
+.register .bottom {
+    margin-top: 30px;
+    height: 40px;
+    border-top: 1px solid #999;
+    line-height: 40px;
+    padding-left: 10px;
+    background: #eee;
+}
+
+.register .bottom span {
+    cursor: pointer;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="icon/iconfont.css" />
+    <link rel="stylesheet" href="css/list.css">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>商品列表</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+</head>
+<style>
+</style>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="top">
+            <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+            <div class="topRight">
+                <div class="searchbox">
+                    <input type="text" name="search" id="search" placeholder="氧气耳机">
+                </div>
+                <div class="shopcart">
+                    <a href="cart.html">
+                        <div class="iconfont">&#xe502;</div>
+                        <span>0</span>
+                    </a>
+                </div>
+                <div class="userInfo">
+                    <span>登录</span>
+                    <span class="iconfont arr">&#xe68a;</span>
+                    <div class="loginBox">
+                        <ul>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe602;</span>&nbsp;&nbsp;手机号登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe658;</span>&nbsp;&nbsp;微信登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xf0067;</span>&nbsp;&nbsp;QQ登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe632;</span>&nbsp;&nbsp;新浪微博登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe607;</span>&nbsp;&nbsp;网易邮箱账号登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="footerLeft">
+                <a href="#">关于网易</a><span>|</span>
+                <a href="#">客户服务</a><span>|</span>
+                <a href="#">服务条款</a><span>|</span>
+                <a href="#">网站导航</a><span>|</span>
+                <a href="#">意见反馈</a>
+                <p>
+                    网易公司版权所有©1997-2019&nbsp;&nbsp;&nbsp;&nbsp;杭州乐读科技有限公司运营：<a class="licence" href="http://p1.music.126.net/-DB9zs1FAJq8vg7HOb-yOQ==/3250156395654666.jpg"
+                        target="_blank">浙网文[2015] 0415-135号</a>
+                </p>
+            </div>
+            <ul class="footerRight">
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe611;</p>
+                        独立音乐人
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe649;</p>
+                        音乐专栏
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#x347a;</p>
+                        自媒体
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe652;</p>
+                        赞赏
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- rightNav -->
+    <div class="rightNav" style="z-index:999">
+        <div style="border-bottom:1px solid #999"> <span>100%<br>正品</span> </div>
+        <div style="border-bottom:1px solid #999"> <span>七天无理由退货</span> </div>
+        <div style="border-bottom:1px solid #999"><a href="cart.html"><span>
+                    <p class="iconfont">&#xe502;</p>购物车
+                </span> <span>0</span></a></div>
+        <div><a href="#"><span>
+                    <p class="iconfont">&#xe625;</p>客服
+                </span></a></div>
+        <div class="toTop"><span>
+                <p class="iconfont">&#xe689;</p>TOP
+            </span></div>
+    </div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    var loginOrNot = false;
+    // setCookie("login", "false")
+    loginOrNot = getCookie("login")
+    console.log(loginOrNot)
+    if (loginOrNot) {
+        document.getElementsByClassName("arr")[0].style.position = "relative"
+        document.getElementsByClassName("arr")[0].style.top = "-12px"
+        document.getElementsByClassName("arr")[0].style.left = "0px"
+        document.getElementsByClassName("arr")[0].style.fontSize = "20px"
+        document.getElementsByClassName("userInfo")[0].children[0].innerHTML =
+            `<img src="images/touxiang.jpg" alt="" style="width:36px; height:36px; border-radius: 50%;">`
+        document.getElementsByClassName("userInfo")[0].onmouseenter = function () {
+            document.getElementsByClassName("arr")[0].innerHTML = "&#xe506;"
+            document.getElementsByClassName("loginBox")[0].style.display = "block"
+            var str =
+                `<ul>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe509;</span>&nbsp;&nbsp;我的订单</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe640;</span>&nbsp;&nbsp;我的优惠券</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe514;</span>&nbsp;&nbsp;我的收货地址</a>
+                </li>
+                <li>
+                    <a href="#"><span class="iconfont">&#xe501;</span>&nbsp;&nbsp;网易云音乐首页</a>
+                </li>
+                <li style="border-top:1px solid #999;width:145px;" >
+                    <a href="#" class="quit"><span class="iconfont">&#xe657;</span>&nbsp;&nbsp;退出</a>
+                </li>
+            </ul>`
+            document.getElementsByClassName("loginBox")[0].innerHTML = str
+            $(".quit").click(function () {
+                loginOrNot = false;
+                setCookie("login", "")
+                window.location.reload()
+            })
+        }
+        document.getElementsByClassName("userInfo")[0].onmouseleave = function () {
+            document.getElementsByClassName("iconfont")[1].innerHTML = "&#xe68a;"
+            document.getElementsByClassName("loginBox")[0].style.display = "none"
+        }
+    } else {
+        document.getElementsByClassName("userInfo")[0].onmouseenter = function () {
+            document.getElementsByClassName("iconfont")[1].innerHTML = "&#xe506;"
+            document.getElementsByClassName("loginBox")[0].style.display = "block"
+        }
+        document.getElementsByClassName("userInfo")[0].onmouseleave = function () {
+            document.getElementsByClassName("iconfont")[1].innerHTML = "&#xe68a;"
+            document.getElementsByClassName("loginBox")[0].style.display = "none"
+        }
+    }
+</script>
+</html>
