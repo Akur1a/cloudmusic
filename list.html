@@ -142,7 +142,10 @@
     border: 1px solid red;
     font-size: 12px !important;
 }
-
+.section .selector li.active a{
+    background: #000;
+    color: white;
+}
 </style>
 
 <body>
@@ -196,6 +199,7 @@
             <div class=selector-top>
                 <span>分类：</span>
                 <ul>
+                    <li><a href="javascript:;">全部</a></li>
                     <li><a href="javascript:;">耳机</a></li>
                     <li><a href="javascript:;">键盘</a></li>
                     <li><a href="javascript:;">雨伞</a></li>
@@ -206,6 +210,7 @@
             <div class=selector-bottom>
                 <span>价格：</span>
                 <ul>
+                    <li><a href="javascript:;">全部</a></li>
                     <li><a href="javascript:;">0-128</a></li>
                     <li><a href="javascript:;">129-199</a></li>
                     <li><a href="javascript:;">200-458</a></li>
@@ -296,7 +301,7 @@
     var loginOrNot = false;
     // setCookie("login", "false")
     loginOrNot = getCookie("login")
-    console.log(loginOrNot)
+    // console.log(loginOrNot)
     if (loginOrNot) {
         document.getElementsByClassName("arr")[0].style.position = "relative"
         document.getElementsByClassName("arr")[0].style.top = "-12px"
@@ -359,7 +364,7 @@
             "scrollTop": 0
         }, 500)
     })
-
+    var arrTuijian = [];
     var ajax = null;
     if (XMLHttpRequest) {
         ajax = new XMLHttpRequest();
@@ -371,8 +376,9 @@
     ajax.send();
     ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 200) {
-            var arrTuijian = JSON.parse(ajax.responseText);
-            for (let i = 0; i < arrTuijian.length; i++) {
+            arrTuijian = JSON.parse(ajax.responseText);
+            console.log(arrTuijian)
+            for (var i = 0; i < arrTuijian.length; i++) {
                 document.getElementsByClassName("ulRec")[0].innerHTML +=
                     `<li class="liRec">
                         <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
@@ -397,10 +403,305 @@
         for (let j = 0; j < hot.length; j++) {
             if (hot[j].innerHTML == "undefined") {
                 hot[j].remove();
-                // console.log(this)
             }
         }
     }
+    $(".selector-top ul li").eq(0).click(function () {
+        $(this).siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-top ul li").eq(1).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (arrTuijian[i].class == "耳机") {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-top ul li").eq(2).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (arrTuijian[i].class == "键盘") {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-top ul li").eq(3).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (arrTuijian[i].class == "雨伞") {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-top ul li").eq(4).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (arrTuijian[i].class == "充电宝") {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-top ul li").eq(5).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (arrTuijian[i].class == "尤克里里") {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })    
+    $(".selector-bottom ul li").eq(0).click(function () {
+        $(this).siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })
+    $(".selector-bottom ul li").eq(1).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (parseInt(arrTuijian[i].price.substr(1))<129) {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })    
+    $(".selector-bottom ul li").eq(2).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (parseInt(arrTuijian[i].price.substr(1))<200&&parseInt(arrTuijian[i].price.substr(1))>128) {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })    
+    $(".selector-bottom ul li").eq(3).click(function () {
+        $(this).addClass("active").siblings().removeClass();
+        document.getElementsByClassName("ulRec")[0].innerHTML = ""
+        for (var i = 0; i < arrTuijian.length; i++) {
+            if (parseInt(arrTuijian[i].price.substr(1))>199) {
+                document.getElementsByClassName("ulRec")[0].innerHTML +=
+                    `<li class="liRec">
+                        <a href="detail.html"  target="_blank"  class="detailImg"><img src="images/tuijian/${arrTuijian[i].img}.png" alt=""></a>
+                <div class="goodName" style="text-align: center;">
+                    <span class="hot">${arrTuijian[i].sale}</span>
+                    <a href="detail.html" target="_blank"" >${arrTuijian[i].title}</a>
+                    <p class="price">${arrTuijian[i].price}</p>
+                </div>
+            </li>`
+            }
+        }
+        document.getElementsByClassName("ulRec")[0].innerHTML += `<div class="clear"></div>`
+        var liRec = document.getElementsByClassName("liRec")
+        for (let i = 0; i < liRec.length; i++) {
+            if ((i + 1) % 4 == 0) {
+                liRec[i].style.marginRight = "0";
+            }
+        }
+        var hot = document.getElementsByClassName("hot")
+        for (let j = 0; j < hot.length; j++) {
+            if (hot[j].innerHTML == "undefined") {
+                hot[j].remove();
+            }
+        }
+    })    
 </script>
 
 </html>
