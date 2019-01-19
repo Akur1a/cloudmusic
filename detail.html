@@ -184,6 +184,7 @@
             line-height: 30px;
             margin-right: 20px;
             font-size: 12px;
+            cursor: pointer;
         }        
         .main .main-top .main-top-right .basic .color-select ul li.active{
             border: 1px solid #000;
@@ -207,6 +208,7 @@
             text-align: center;
             line-height: 30px;
             font-size: 26px;
+            cursor: pointer;
         }        
         .main .main-top .main-top-right .basic .num ul span{
             margin: 0;
@@ -252,8 +254,107 @@
         }  
         .main .main-top .main-top-right .buy span:last-child{
             background: #d33a31;
-            color: white
-            
+            color: white;
+        }
+        .main .taocan{
+            width: 1140px;
+            height: 400px;
+            border: 1px solid #eee;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+        .main .taocan p:first-child{
+            width: 1140px;
+            height: 40px;
+            background: #eee;
+            line-height: 40px;
+            padding-left: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+        .main .taocan ul{
+            width: 1140px;
+            height: 80px;
+            margin-left: 10px;
+        }
+        .main .taocan ul li{
+            float: left;
+            line-height: 80px;
+            margin: 0 20px;
+            color: #999;
+            cursor: pointer;
+        }
+        .main .taocan ul li.active{
+            color: #000
+        }
+        .main .about{
+            margin-top: 50px;
+        }
+        .main .about .left{
+            float: left;
+            width: 700px;
+        }
+        .main .about .right{
+            float: right;
+            width: 340px;
+        }        
+        .main .about .section-top{
+            width: 100%;
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+        }       
+        .main .about .section-top span{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .clear {
+            clear: both;
+            height: 0;
+            overflow: hidden;
+        }  
+        .main .about .right ul{
+            margin-top: 30px;
+        }
+        .main .about .right ul li{
+            height: 100px;
+            width: 340px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .main .about .right ul li img{
+            display: block;
+            float: left;
+            width: 100px;
+            height: 100px;
+        } 
+        .main .about .right ul li .wrap{
+            float:right;
+            height: 100%;
+            width: 230px;
+        }
+        .main .about .right ul li .wrap span{
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .main .about .right ul li .wrap .title:hover{
+            text-decoration: underline;
+        }
+        .main .about .right ul li .wrap span:first-child{
+            color: red;
+            border: 1px solid red;
+            font-size: 12px;
+            padding: 1px;
+        }
+        .main .about .right ul li .wrap p{
+            margin-top: 35px;
+            color: #d33a31;
+            font-weight: bold;
+            letter-spacing: 1px
+        }
+        .about .left img{
+            margin: 0;
+            width: 700px;
+            display: block;
         }
     </style>
 </head>
@@ -370,6 +471,65 @@
                 </div>
             </div>
         </div>
+        <div class="taocan">
+            <p class="title">优惠套餐</p>
+            <ul class="title-list">
+                <li class="active">套餐一</li>
+                <li>套餐二</li>
+                <li>套餐三</li>
+                <li>套餐四</li>
+            </ul>
+
+        </div>
+        <div class="about">
+            <div class="left">
+                    <div class="section-top">
+                        <span style="font-weight:1000">商品详情</span>
+                    </div>
+                        <img src="images/detail/3.png" alt="">
+                        <img src="images/detail/4.png" alt="">
+            </div>
+            <div class="right">
+                <div class="section-top">
+                    <span>热门商品</span>
+                </div>
+                <ul>
+                    <li>
+                        <img src="images/tuijian/0.png" alt="">
+                        <div class="wrap">
+                            <span>热门</span>
+                            <span class="title">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带...</span>
+                            <p>￥128</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/tuijian/0.png" alt="">
+                        <div class="wrap">
+                            <span>热门</span>
+                            <span class="title">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带...</span>
+                            <p>￥128</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/tuijian/0.png" alt="">
+                        <div class="wrap">
+                            <span>热门</span>
+                            <span class="title">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带...</span>
+                            <p>￥128</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/tuijian/0.png" alt="">
+                        <div class="wrap">
+                            <span>热门</span>
+                            <span class="title">JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带...</span>
+                            <p>￥128</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
     <!-- footer -->
     <footer>
@@ -468,6 +628,32 @@
         $(this).addClass("active").siblings().removeClass();
         smallImg.src = this.children[0].src;
         bigImg.src = this.children[0].src;
+    })
+    $(".main .main-top .main-top-right .basic .color-select ul li").click(function () {
+        if ($(this).html() == "红色") {
+            $(this).addClass("active").siblings().removeClass();
+            $(".smnav ul li").eq(0).addClass("active").siblings().removeClass();
+            bigImg.src = smallImg.src = "images/detail/0.png";
+        } else if ($(this).html() == "黑色") {
+            $(this).addClass("active").siblings().removeClass();
+            $(".smnav ul li").eq(1).addClass("active").siblings().removeClass();
+            bigImg.src = smallImg.src = "images/detail/1.png";
+        } else {
+            $(this).addClass("active").siblings().removeClass();
+            $(".smnav ul li").eq(2).addClass("active").siblings().removeClass();
+            bigImg.src = smallImg.src = "images/detail/2.png";
+        }
+    })
+    $(".main .main-top .main-top-right .basic .num ul li").click(function () {
+        if ($(this).html() == "+") {
+            document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value++;
+        } else {
+            if (document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value == 1) {
+                document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value = 1;
+            } else {
+                document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value--;
+            }
+        }
     })
 </script>
 
