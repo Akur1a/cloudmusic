@@ -46,16 +46,17 @@
         .main .main-top{
             width: 1100px;
             height: 530px;
-            background: pink;
         }
         .main .main-top .main-top-left{
             width: 440px;
             height: 530px;
+            float: left;
         }
         .main .main-top .main-top-left .imgbox{
             width: 440px;
             height: 440px;
             position: relative;
+            background: #eee
         }
 		#mask{
 			width: 175px;
@@ -75,6 +76,7 @@
             width: 450px;
             height: 450px;
             overflow: hidden;
+            background: #eee;
 			display: none;
         }                
         .main .main-top .main-top-left .imgbox .bigimg img{
@@ -102,7 +104,157 @@
             height: 80px;
             width: 80px;
         }
-
+        .main .main-top .main-top-right{
+            width: 580px;
+            height: 460px;
+            float: right;
+        }
+        .main .main-top .main-top-right .basic{
+            width: 580px;
+            height: 340px;
+        }
+        .main .main-top .main-top-right .basic h2{
+            font-weight: normal;
+        }
+        .main .main-top .main-top-right .basic .sellpoint{
+            font-size: 14px;
+            margin-top: 8px;
+            color: #999;
+        }
+        .main .main-top .main-top-right .basic .price{
+            font-size: 30px;
+            color: #d33a31;
+            padding-top: 15px;
+            font-weight: bolder;
+            letter-spacing: 2px
+        }
+        .main .main-top .main-top-right .basic .sale{
+            color: #999;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .main .main-top .main-top-right .basic .sale span{
+            color: red;
+        }        
+        .main .main-top .main-top-right .basic .coupons{            
+            color: #999;
+            font-size: 14px;
+            margin-top: 15px;
+            float: left;
+        }
+        .main .main-top .main-top-right .basic .coupons .coupon{
+            float: right;
+            display: inline-block;
+            width: 520px;
+            height: 30px;
+            background:rgba(255,69,0,0.1);
+            line-height: 30px;
+            margin-left: 30px;
+            margin-top: -25px;
+            color: #333
+        }
+        .main .main-top .main-top-right .basic .coupons .coupon .label{
+            margin-left: 8px;
+            border: 1px solid red;
+            color: red;
+            margin-right: 6px;
+        }
+        .main .main-top .main-top-right .basic .coupons .coupon span:last-child{          
+            color: #999;
+            margin-left: 5px;
+        }
+        .main .main-top .main-top-right .basic .color-select{
+            margin-top: 50px;
+            width: 580px;
+            height: 60px;;
+        }
+        .main .main-top .main-top-right .basic .color-select span{
+            float: left;       
+            color: #999;
+            font-size: 14px;
+            margin-right: 26px;
+            margin-top: 8px;
+        }
+        .main .main-top .main-top-right .basic .color-select ul li{
+            float: left;
+            width: 60px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 20px;
+            font-size: 12px;
+        }        
+        .main .main-top .main-top-right .basic .color-select ul li.active{
+            border: 1px solid #000;
+        }
+        .main .main-top .main-top-right .basic .num{
+            width: 580px;
+            height: 60px;
+        }
+        .main .main-top .main-top-right .basic .num span{
+            float: left;       
+            color: #999;
+            font-size: 14px;
+            margin-right: 26px;
+            margin-top: 8px;
+        }
+        .main .main-top .main-top-right .basic .num ul li{
+            float: left;
+            width: 35px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 30px;
+            font-size: 26px;
+        }        
+        .main .main-top .main-top-right .basic .num ul span{
+            margin: 0;
+        }
+        .main .main-top .main-top-right .basic .num ul input{            
+            width: 60px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+        }
+        .main .main-top .main-top-right .services span{  
+            color: #999;
+            font-size: 14px;
+            margin-right: 26px;
+            margin-top: 8px;
+        }
+        .main .main-top .main-top-right .services span a{
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        .main .main-top .main-top-right .services span a:hover{
+            text-decoration: underline
+        }        
+        .main .main-top .main-top-right .buy{
+            width: 580px;
+            margin-top:20px; 
+        }      
+        .main .main-top .main-top-right .buy span{
+            text-align: center;
+            display: inline-block;
+            line-height: 46px;
+            width: 166px;
+            height: 46px;
+            border: 2px solid #d33a31;
+            font-size: 18px;
+        }     
+        .main .main-top .main-top-right .buy span:first-child{
+            margin-right:10px;
+            background: #fff 
+        }  
+        .main .main-top .main-top-right .buy span:last-child{
+            background: #d33a31;
+            color: white
+            
+        }
     </style>
 </head>
 
@@ -174,6 +326,48 @@
                     </ul>
                 </div>
 
+            </div>
+            <div class="main-top-right">
+                <div class="basic">
+                    <h2>JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</h2>
+                    <p class="sellpoint">佩戴舒适 强劲低音 一键式线控 音乐通话耳机</p>
+                    <p class="price ">¥128</p>
+                    <p class="sale">使用"数码开年超享礼券" ,可省<span class="cutoff">¥40</span></p>
+                    <div class="coupons">
+                        <span class="title">促销: </span>
+                        <span class="coupon">
+                            <span class="label">火热开抢</span>40元&nbsp;&nbsp;数码开年超享礼券,无门槛<span>已领</span>
+                        </span>
+                    </div>
+                    <div class="color-select">
+                        <span class="title">颜色 :</span>
+                        <ul>
+                            <li>红色</li>
+                            <li>黑色</li>
+                            <li>白色</li>
+                        </ul>
+                    </div>
+                    <div class="num">
+                        <span class="title">数量 :</span>
+                        <ul>
+                            <li>-</li>
+                            <span><input type="text" name="" id="" value="1"></span>
+                            <li>+</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="services">
+                    <span>服务 : </span>
+                    <span>
+                        <a class="service">• 满119包邮</a>
+                        <a class="service">• 商家发货</a>
+                        <a class="service">• 商家认证</a>
+                    </span>
+                </div>
+                <div class="buy">
+                    <span class="buynow">立即购买</span>
+                    <span class="addcart">加入购物车</span>
+                </div>
             </div>
         </div>
     </div>
@@ -272,8 +466,8 @@
     }
     $(".smnav ul li").click(function () {
         $(this).addClass("active").siblings().removeClass();
-        smallImg.src=this.children[0].src;
-        bigImg.src=this.children[0].src;
+        smallImg.src = this.children[0].src;
+        bigImg.src = this.children[0].src;
     })
 </script>
 
