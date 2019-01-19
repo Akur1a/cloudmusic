@@ -1,8 +1,9 @@
     var loginOrNot = false;
     // setCookie("login", "false")
     loginOrNot = getCookie("login")
-    console.log(loginOrNot)
-    if (!loginOrNot) {
+    // console.log(loginOrNot)
+    if (getCookie("login")) {
+        // alert(loginOrNot)
         document.getElementsByClassName("arr")[0].style.position = "relative"
         document.getElementsByClassName("arr")[0].style.top = "-35px"
         document.getElementsByClassName("arr")[0].style.left = "40px"
@@ -107,7 +108,7 @@
             var ajax = new XMLHttpRequest();
             var data = `status=register&uname=${uname}&upwd=${upwd}`; //路径参数
             ajax.open("get", "php/register_login.php?" + data);
-            ajax.setRequestHeader( "If-Modified-Since","0" );
+            ajax.setRequestHeader("If-Modified-Since", "0");
             ajax.send();
             ajax.onreadystatechange = function () {
                 if (ajax.readyState == 4 && ajax.status == 200) {
@@ -130,14 +131,14 @@
             alert("输入有误！")
         }
     })
-    $(".loginbtn").click(function(){
+    $(".loginbtn").click(function () {
         var uname = $(".uname").eq(0).val();
         var upwd = $(".upwd").eq(0).val();
         if ((/^1(3|4|5|7|8)\d{9}$/.test(uname)) && (/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,}$/.test(upwd))) {
             var ajax = new XMLHttpRequest();
             var data = `status=login&uname=${uname}&upwd=${upwd}`; //路径参数
             ajax.open("get", "php/register_login.php?" + data);
-            ajax.setRequestHeader( "If-Modified-Since","0" );
+            ajax.setRequestHeader("If-Modified-Since", "0");
             ajax.send();
             ajax.onreadystatechange = function () {
                 if (ajax.readyState == 4 && ajax.status == 200) {
@@ -160,3 +161,9 @@
             alert("输入有误！")
         }
     })
+    var boxheight = (parseInt($(".mid .main").css("height")) - parseInt($(".mid .main .box").css("height"))) / 2
+    $(".mid .main .box").css("padding-top", boxheight)
+    window.onresize = function () {
+        var boxheight = (parseInt($(".mid .main").css("height")) - parseInt($(".mid .main .box").css("height"))) / 2
+        $(".mid .main .box").css("padding-top", boxheight)
+    }

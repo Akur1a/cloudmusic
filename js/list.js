@@ -1,9 +1,7 @@
 
     var loginOrNot = false;
-    // setCookie("login", "false")
     loginOrNot = getCookie("login")
-    // console.log(loginOrNot)
-    if (loginOrNot) {
+    if (getCookie("login")) {
         document.getElementsByClassName("arr")[0].style.position = "relative"
         document.getElementsByClassName("arr")[0].style.top = "-12px"
         document.getElementsByClassName("arr")[0].style.left = "0px"

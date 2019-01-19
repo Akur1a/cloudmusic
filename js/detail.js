@@ -1,7 +1,6 @@
 var loginOrNot = false;
-// setCookie("login", "false")
 loginOrNot = getCookie("login")
-if (loginOrNot) {
+if (getCookie("login")) {
     document.getElementsByClassName("arr")[0].style.position = "relative"
     document.getElementsByClassName("arr")[0].style.top = "-12px"
     document.getElementsByClassName("arr")[0].style.fontSize = "20px"

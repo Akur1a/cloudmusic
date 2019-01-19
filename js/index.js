@@ -1,11 +1,4 @@
-
-    var loginOrNot = false;
-    if (getCookie("login") == "") {
-        setCookie("login", "false")
-    } else {
-        loginOrNot = getCookie("login")
-    }
-    if (loginOrNot) {
+    if (getCookie("login")) {
         document.getElementsByClassName("arr")[0].style.position = "relative"
         document.getElementsByClassName("arr")[0].style.top = "-12px"
         document.getElementsByClassName("arr")[0].style.fontSize = "20px"
@@ -110,7 +103,7 @@
             "scrollTop": 0
         }, 500)
     })
-    if (!loginOrNot) {
+    if (!getCookie("login")) {
         $(".shopcart a").attr("href", "login.html");
         $(".rightNav a").eq(0).attr("href", "login.html");
     }
