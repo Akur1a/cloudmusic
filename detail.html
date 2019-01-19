@@ -4,358 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="icon/iconfont.css" />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detail.css">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title>云音乐商城 - 音乐购有趣</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <style>
-        .section{
-            width:1100px;
-            margin: 0 auto;
-            margin-top: 40px;
-        }
-        .section .section-top{
-            border-bottom: 1px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 15px;
-
-        }
-        .section .section-top a{
-            font-size: 18px;
-            font-weight: 600;
-        }
-        .section .section-top a:hover{
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        .section .section-top span{
-            font-size: 16px;
-            color: #999;
-            font-weight: 600;
-        }
-        .section .section-top span:last-child{
-            float: right;
-            font-size: 18px;
-            color: #666;
-            font-weight: 600;
-        }
-        .main{
-            width: 1100px;
-            margin: 0 auto;
-        }
-        .main .main-top{
-            width: 1100px;
-            height: 530px;
-        }
-        .main .main-top .main-top-left{
-            width: 440px;
-            height: 530px;
-            float: left;
-        }
-        .main .main-top .main-top-left .imgbox{
-            width: 440px;
-            height: 440px;
-            position: relative;
-            background: #eee
-        }
-		#mask{
-			width: 175px;
-			height: 175px;
-			background: grey;
-			position: absolute;
-			top: 0;
-			left: 0;
-			opacity: .3;
-			display: none;
-			cursor: move;
-        }        
-        .main .main-top .main-top-left .imgbox .bigimg{
-            position: absolute;
-            top:0;
-            left:450px;
-            width: 450px;
-            height: 450px;
-            overflow: hidden;
-            background: #eee;
-			display: none;
-        }                
-        .main .main-top .main-top-left .imgbox .bigimg img{
-            width: 800px;
-            height: 800px;
-            position: relative;
-        }
-        .smnav{
-            width: 440px;
-            height: 80px;
-            margin-top:10px;
-        }
-        .smnav ul li{
-            float: left;
-            width: 80px;
-            height: 80px;
-            background: #ddd;
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        .smnav ul li.active{
-            border: 2px solid orangered;
-        }
-        .smnav ul li img{
-            height: 80px;
-            width: 80px;
-        }
-        .main .main-top .main-top-right{
-            width: 580px;
-            height: 460px;
-            float: right;
-        }
-        .main .main-top .main-top-right .basic{
-            width: 580px;
-            height: 340px;
-        }
-        .main .main-top .main-top-right .basic h2{
-            font-weight: normal;
-        }
-        .main .main-top .main-top-right .basic .sellpoint{
-            font-size: 14px;
-            margin-top: 8px;
-            color: #999;
-        }
-        .main .main-top .main-top-right .basic .price{
-            font-size: 30px;
-            color: #d33a31;
-            padding-top: 15px;
-            font-weight: bolder;
-            letter-spacing: 2px
-        }
-        .main .main-top .main-top-right .basic .sale{
-            color: #999;
-            font-size: 14px;
-            margin-top: 15px;
-        }
-        .main .main-top .main-top-right .basic .sale span{
-            color: red;
-        }        
-        .main .main-top .main-top-right .basic .coupons{            
-            color: #999;
-            font-size: 14px;
-            margin-top: 15px;
-            float: left;
-        }
-        .main .main-top .main-top-right .basic .coupons .coupon{
-            float: right;
-            display: inline-block;
-            width: 520px;
-            height: 30px;
-            background:rgba(255,69,0,0.1);
-            line-height: 30px;
-            margin-left: 30px;
-            margin-top: -25px;
-            color: #333
-        }
-        .main .main-top .main-top-right .basic .coupons .coupon .label{
-            margin-left: 8px;
-            border: 1px solid red;
-            color: red;
-            margin-right: 6px;
-        }
-        .main .main-top .main-top-right .basic .coupons .coupon span:last-child{          
-            color: #999;
-            margin-left: 5px;
-        }
-        .main .main-top .main-top-right .basic .color-select{
-            margin-top: 50px;
-            width: 580px;
-            height: 60px;;
-        }
-        .main .main-top .main-top-right .basic .color-select span{
-            float: left;       
-            color: #999;
-            font-size: 14px;
-            margin-right: 26px;
-            margin-top: 8px;
-        }
-        .main .main-top .main-top-right .basic .color-select ul li{
-            float: left;
-            width: 60px;
-            height: 30px;
-            border: 1px solid #ccc;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 20px;
-            font-size: 12px;
-            cursor: pointer;
-        }        
-        .main .main-top .main-top-right .basic .color-select ul li.active{
-            border: 1px solid #000;
-        }
-        .main .main-top .main-top-right .basic .num{
-            width: 580px;
-            height: 60px;
-        }
-        .main .main-top .main-top-right .basic .num span{
-            float: left;       
-            color: #999;
-            font-size: 14px;
-            margin-right: 26px;
-            margin-top: 8px;
-        }
-        .main .main-top .main-top-right .basic .num ul li{
-            float: left;
-            width: 35px;
-            height: 30px;
-            border: 1px solid #ccc;
-            text-align: center;
-            line-height: 30px;
-            font-size: 26px;
-            cursor: pointer;
-        }        
-        .main .main-top .main-top-right .basic .num ul span{
-            margin: 0;
-        }
-        .main .main-top .main-top-right .basic .num ul input{            
-            width: 60px;
-            height: 30px;
-            border: 1px solid #ccc;
-            text-align: center;
-            line-height: 30px;
-            font-size: 12px;
-        }
-        .main .main-top .main-top-right .services span{  
-            color: #999;
-            font-size: 14px;
-            margin-right: 26px;
-            margin-top: 8px;
-        }
-        .main .main-top .main-top-right .services span a{
-            font-size: 14px;
-            cursor: pointer;
-            margin-right: 15px;
-        }
-        .main .main-top .main-top-right .services span a:hover{
-            text-decoration: underline
-        }        
-        .main .main-top .main-top-right .buy{
-            width: 580px;
-            margin-top:20px; 
-        }      
-        .main .main-top .main-top-right .buy span{
-            text-align: center;
-            display: inline-block;
-            line-height: 46px;
-            width: 166px;
-            height: 46px;
-            border: 2px solid #d33a31;
-            font-size: 18px;
-        }     
-        .main .main-top .main-top-right .buy span:first-child{
-            margin-right:10px;
-            background: #fff 
-        }  
-        .main .main-top .main-top-right .buy span:last-child{
-            background: #d33a31;
-            color: white;
-        }
-        .main .taocan{
-            width: 1140px;
-            height: 400px;
-            border: 1px solid #eee;
-            margin-top: 70px;
-            overflow: hidden;
-        }
-        .main .taocan p:first-child{
-            width: 1140px;
-            height: 40px;
-            background: #eee;
-            line-height: 40px;
-            padding-left: 20px;
-            font-weight: bold;
-            color: #000;
-        }
-        .main .taocan ul{
-            width: 1140px;
-            height: 80px;
-            margin-left: 10px;
-        }
-        .main .taocan ul li{
-            float: left;
-            line-height: 80px;
-            margin: 0 20px;
-            color: #999;
-            cursor: pointer;
-        }
-        .main .taocan ul li.active{
-            color: #000
-        }
-        .main .about{
-            margin-top: 50px;
-        }
-        .main .about .left{
-            float: left;
-            width: 700px;
-        }
-        .main .about .right{
-            float: right;
-            width: 340px;
-        }        
-        .main .about .section-top{
-            width: 100%;
-            border-bottom: 1px solid #000;
-            padding-bottom: 20px;
-        }       
-        .main .about .section-top span{
-            font-size: 22px;
-            font-weight: 400;
-        }
-        .clear {
-            clear: both;
-            height: 0;
-            overflow: hidden;
-        }  
-        .main .about .right ul{
-            margin-top: 30px;
-        }
-        .main .about .right ul li{
-            height: 100px;
-            width: 340px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        .main .about .right ul li img{
-            display: block;
-            float: left;
-            width: 100px;
-            height: 100px;
-        } 
-        .main .about .right ul li .wrap{
-            float:right;
-            height: 100%;
-            width: 230px;
-        }
-        .main .about .right ul li .wrap span{
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .main .about .right ul li .wrap .title:hover{
-            text-decoration: underline;
-        }
-        .main .about .right ul li .wrap span:first-child{
-            color: red;
-            border: 1px solid red;
-            font-size: 12px;
-            padding: 1px;
-        }
-        .main .about .right ul li .wrap p{
-            margin-top: 35px;
-            color: #d33a31;
-            font-weight: bold;
-            letter-spacing: 1px
-        }
-        .about .left img{
-            margin: 0;
-            width: 700px;
-            display: block;
-        }
     </style>
 </head>
 
@@ -421,9 +74,9 @@
                 </div>
                 <div class="smnav">
                     <ul>
-                        <li class="active"><img src="images/detail/0.png" alt=""></li>
-                        <li><img src="images/detail/1.png" alt=""></li>
-                        <li><img src="images/detail/2.png" alt=""></li>
+                        <li class="active" index="0"><img src="images/detail/0.png" alt=""></li>
+                        <li index="1"><img src="images/detail/1.png" alt=""></li>
+                        <li index="2"><img src="images/detail/2.png" alt=""></li>
                     </ul>
                 </div>
 
@@ -474,20 +127,20 @@
         <div class="taocan">
             <p class="title">优惠套餐</p>
             <ul class="title-list">
-                <li class="active">套餐一</li>
-                <li>套餐二</li>
-                <li>套餐三</li>
-                <li>套餐四</li>
+                <li class="active" index="0">套餐一</li>
+                <li index="1">套餐二</li>
+                <li index="2">套餐三</li>
+                <li index="3">套餐四</li>
             </ul>
-
+            <img src="images/detail/taocan/0.png" alt="">
         </div>
         <div class="about">
             <div class="left">
-                    <div class="section-top">
-                        <span style="font-weight:1000">商品详情</span>
-                    </div>
-                        <img src="images/detail/3.png" alt="">
-                        <img src="images/detail/4.png" alt="">
+                <div class="section-top">
+                    <span style="font-weight:1000">商品详情</span>
+                </div>
+                <img src="images/detail/3.png" alt="">
+                <img src="images/detail/4.png" alt="">
             </div>
             <div class="right">
                 <div class="section-top">
@@ -587,74 +240,25 @@
                 <p class="iconfont">&#xe689;</p>TOP
             </span></div>
     </div>
+    <!-- topbar -->
+    <div class="topbar">
+        <div class="main">
+            <img src="images/detail/0.png" alt="">
+            <ul>
+                <li>JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</li>
+                <li>¥128</li>
+            </ul>
+            <div class="buy">
+                <span class="buynow">立即购买</span>
+                <span class="addcart">加入购物车</span>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/cookie.js"></script>
 <script src="js/detail.js"></script>
 <script>
-    function $id(id) {
-        return document.getElementById(id)
-    }
-    var box = document.querySelectorAll(".main-top-left")[0],
-        small = document.querySelectorAll(".imgbox")[0],
-        mask = $id("mask"),
-        big = document.querySelectorAll(".bigimg")[0],
-        bigImg = document.querySelectorAll(".bigimg img")[0],
-        smallImg = $id("smallImg");
-    small.onmouseover = function () {
-        mask.style.display = "block";
-        big.style.display = "block";
-    }
-    small.onmouseout = function () {
-        mask.style.display = "none";
-        big.style.display = "none";
-    }
-    small.onmousemove = function (e) {
-        var e = e || event;
-        var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
-        var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
-        var maxL = smallImg.offsetWidth - mask.offsetWidth;
-        var maxT = smallImg.offsetHeight - mask.offsetHeight;
-        x = x < 0 ? 0 : (x > maxL ? maxL : x);
-        y = y < 0 ? 0 : (y > maxT ? maxT : y);
-        mask.style.left = x + "px";
-        mask.style.top = y + "px";
-        var bigImgLeft = x * (bigImg.offsetWidth - big.offsetWidth) / (smallImg.offsetWidth - mask.offsetWidth);
-        var bigImgTop = y * (bigImg.offsetHeight - big.offsetHeight) / (smallImg.offsetHeight - mask.offsetHeight);
-        bigImg.style.left = -bigImgLeft + "px";
-        bigImg.style.top = -bigImgTop + "px";
-    }
-    $(".smnav ul li").click(function () {
-        $(this).addClass("active").siblings().removeClass();
-        smallImg.src = this.children[0].src;
-        bigImg.src = this.children[0].src;
-    })
-    $(".main .main-top .main-top-right .basic .color-select ul li").click(function () {
-        if ($(this).html() == "红色") {
-            $(this).addClass("active").siblings().removeClass();
-            $(".smnav ul li").eq(0).addClass("active").siblings().removeClass();
-            bigImg.src = smallImg.src = "images/detail/0.png";
-        } else if ($(this).html() == "黑色") {
-            $(this).addClass("active").siblings().removeClass();
-            $(".smnav ul li").eq(1).addClass("active").siblings().removeClass();
-            bigImg.src = smallImg.src = "images/detail/1.png";
-        } else {
-            $(this).addClass("active").siblings().removeClass();
-            $(".smnav ul li").eq(2).addClass("active").siblings().removeClass();
-            bigImg.src = smallImg.src = "images/detail/2.png";
-        }
-    })
-    $(".main .main-top .main-top-right .basic .num ul li").click(function () {
-        if ($(this).html() == "+") {
-            document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value++;
-        } else {
-            if (document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value == 1) {
-                document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value = 1;
-            } else {
-                document.querySelectorAll(".main .main-top .main-top-right .basic .num ul input")[0].value--;
-            }
-        }
-    })
 </script>
 
 </html>
