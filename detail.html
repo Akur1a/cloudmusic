@@ -1,12 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="icon/iconfont.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>云音乐商城 - 音乐购有趣</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <style>
+        .section{
+            width:1100px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+        .section .section-top{
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+
+        }
+        .section .section-top a{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .section .section-top a:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .section .section-top span{
+            font-size: 16px;
+            color: #999;
+            font-weight: 600;
+        }
+        .section .section-top span:last-child{
+            float: right;
+            font-size: 18px;
+            color: #666;
+            font-weight: 600;
+        }
+        .main{
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .main .main-top{
+            width: 1100px;
+            height: 530px;
+            background: pink;
+        }
+        .main .main-top .main-top-left{
+            width: 440px;
+            height: 530px;
+            background: skyblue;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>操你妈！</h1>
+    <!-- 头部 -->
+    <header>
+        <div class="top">
+            <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+            <div class="topRight">
+                <div class="searchbox">
+                    <input type="text" name="search" id="search" placeholder="氧气耳机">
+                </div>
+                <div class="shopcart">
+                    <a href="cart.html">
+                        <div class="iconfont">&#xe502;</div>
+                        <span>0</span>
+                    </a>
+                </div>
+                <div class="userInfo">
+                    <span>登录</span>
+                    <span class="iconfont arr">&#xe68a;</span>
+                    <div class="loginBox">
+                        <ul>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe602;</span>&nbsp;&nbsp;手机号登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe658;</span>&nbsp;&nbsp;微信登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xf0067;</span>&nbsp;&nbsp;QQ登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe632;</span>&nbsp;&nbsp;新浪微博登录</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><span class="iconfont">&#xe607;</span>&nbsp;&nbsp;网易邮箱账号登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- section -->
+    <div class="section">
+        <div class="section-top">
+            <a href="index.html">首页</a>
+            <span>&nbsp;>&nbsp;JBL T120A 立体声入耳式耳机 手机音乐耳机 游戏耳机 耳机耳麦 带麦可通话</span>
+            <span class="iconfont">&#xe608;&nbsp;&nbsp;分享</span>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main">
+        <div class="main-top">
+            <div class="main-top-left">
+
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="footerLeft">
+                <a href="#">关于网易</a><span>|</span>
+                <a href="#">客户服务</a><span>|</span>
+                <a href="#">服务条款</a><span>|</span>
+                <a href="#">网站导航</a><span>|</span>
+                <a href="#">意见反馈</a>
+                <p>
+                    网易公司版权所有©1997-2019&nbsp;&nbsp;&nbsp;&nbsp;杭州乐读科技有限公司运营：<a class="licence" href="http://p1.music.126.net/-DB9zs1FAJq8vg7HOb-yOQ==/3250156395654666.jpg"
+                        target="_blank">浙网文[2015] 0415-135号</a>
+                </p>
+            </div>
+            <ul class="footerRight">
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe611;</p>
+                        独立音乐人
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe649;</p>
+                        音乐专栏
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#x347a;</p>
+                        自媒体
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="iconfont">&#xe652;</p>
+                        赞赏
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- rightNav -->
+    <div class="rightNav" style="z-index:999">
+        <div style="border-bottom:1px solid #999"> <span>100%<br>正品</span> </div>
+        <div style="border-bottom:1px solid #999"> <span>七天无理由退货</span> </div>
+        <div style="border-bottom:1px solid #999"><a href="cart.html"><span>
+                    <p class="iconfont">&#xe502;</p>购物车
+                </span> <span>0</span></a></div>
+        <div><a href="#"><span>
+                    <p class="iconfont">&#xe625;</p>客服
+                </span></a></div>
+        <div class="toTop"><span>
+                <p class="iconfont">&#xe689;</p>TOP
+            </span></div>
+    </div>
 </body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/detail.js"></script>
+
 </html>
