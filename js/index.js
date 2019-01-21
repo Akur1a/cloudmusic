@@ -57,12 +57,12 @@
         $(".banner ul li").eq(bannerIndex).fadeIn(1500).siblings().fadeOut(1500);
         $(".banner .dots a").eq(bannerIndex).addClass("active").siblings().removeClass("active");
     }
-    bannerTimer = setInterval(autoplay, 5000)
+    bannerTimer = setInterval(autoplay, 4000)
     $(".banner").mouseenter(function () {
         clearInterval(bannerTimer)
     })
     $(".banner").mouseleave(function () {
-        bannerTimer = setInterval(autoplay, 5000)
+        bannerTimer = setInterval(autoplay, 4000)
     })
     $(".banner .goPre").eq(0).click(
         function () {
